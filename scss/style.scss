@@ -1,0 +1,266 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
+
+$hover-color: #07a9f4;
+$transition-duration : .5s;
+
+
+
+* {
+	box-sizing: border-box;
+	-webkit-transition: all $transition-duration ease;
+	   -moz-transition: all $transition-duration ease;
+	    -ms-transition: all $transition-duration ease;
+	     -o-transition: all $transition-duration ease;
+	        transition: all $transition-duration ease;
+}
+
+html, body {
+	height: 100%;
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
+
+}
+.section__header{
+	background-image: url(../img/bg.png);
+	background-repeat: no-repeat;
+}
+
+.section{
+	padding: 50px 0 50px 0;
+	.header{
+		padding-bottom: 200px;
+		&__img{
+			width: 100px;
+
+		}
+		&__nav{
+			list-style-type: none;
+			text-transform: uppercase;
+			padding-left: 0;
+			margin:0;
+			.nav__item{
+				text-align: center;
+				margin: 0;
+			}
+			& a{
+				text-decoration: none;
+				color:#fff;
+				&:hover{
+					color: $hover-color;
+				}
+			}
+		}
+	}
+	&__title{
+		text-align: center;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 48px;
+		position: relative;
+		margin:0;
+		max-height: 200px;
+		width: 50%;
+		margin:0 auto;
+		// overflow: hidden;
+		&:before{
+			content: '';
+			position: absolute;
+			bottom: -50px;
+			left:calc(50% - 50px);
+			border-bottom: 2px solid #fff;
+			width: 100px;
+			text-align: center;
+			display: block;
+		}
+		&--black{
+			font-size: 35px;
+			color: #222222;
+			padding-top: 0;
+			position: relative;
+			&:before{
+			content: '';
+			position: absolute;
+			bottom: -50px;
+			left:calc(50% - 50px);
+			border-bottom: 2px solid #222222;
+			width: 100px;
+			text-align: center;
+			display: block;
+			}
+		}
+		&--sm{
+			font-size: 35px;
+			// margin: 0;
+		}
+	
+	}
+	&__subtitle{
+		font-size: 22px;
+		color: #fff;
+		padding-top: 80px;
+		text-align: center;
+		max-height: 160px;
+		overflow: hidden;
+		&--left{
+			text-align: left;
+			font-size: 22px;
+			font-weight: 300;
+			padding-top: 0;
+
+		}
+	}
+	&__wrap{
+		margin: 0 auto;
+
+	}
+	&__btn{
+		display: block;
+		width: 32%;
+		margin:0 auto;
+		border:2px solid #222222;
+		text-align: center;
+		font-size: 24px;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #222222;
+		padding: 20px 0 20px 0;
+		&:hover{
+			color:#fff;
+			background-color: #222222;
+			opacity: 0.6;
+		}
+		&--white{
+			border: 2px solid #fff;
+			color:#fff;
+			width: 20%;
+			margin-top: 50px;
+			&:hover{
+				color: #222222;
+				background-color: #fff;
+				opacity: 0.6;
+			}
+		}
+	}
+	&__scroll{
+		display: block;
+		width: 100px;
+		margin: 0 auto;
+		padding-top: 180px;
+	}
+	&__link{
+		color: #fff;
+		font-size: 18px;
+		&:hover{
+			color: $hover-color;
+		}
+	}
+
+}
+.section_service{
+	padding: 110px 0 110px 0;
+}
+.column{
+	text-align: center;
+	// height: 340px;
+	padding-top: 80px;
+	&__img{
+		height: 140px;
+		width: auto;
+		vertical-align: top;
+	}
+	&__title{
+		padding-top: 50px;
+		font-size: 24px;
+	}
+	&__subtitle{
+		padding-top: 50px;
+		font-size: 16px;
+	}
+
+}
+.section__phone{
+	background: url(../img/phone.png), url(../img/bg_black.png); 
+	background-repeat: no-repeat;
+	background-position: 90% bottom;
+	padding: 140px 0 140px 0;
+}
+.section2__title{
+	text-align: left;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 30px;
+	margin-bottom: 0;
+}
+.gallery{
+	padding: 150px 0 85px 0;
+	
+	&__wrap{
+		position: relative;
+		.overlay{
+			position: absolute;
+			top:0;left:0;
+			bottom: 0;right: 0;
+			background-color: #404040;
+			opacity: 0;
+			overflow: hidden;
+			width: 100%;
+			max-height: 432px;
+			&:hover{
+				opacity: 0.7;
+			}
+			&__title{
+				position: absolute;
+				top:50%;
+				left: 25%;
+				font-size: 22px;
+				color: #fff;
+				text-transform: uppercase;
+
+			}
+			&__img{
+				width: 40px;
+				position: absolute;
+				left: calc(50% - 20px);
+				top: calc(50% + 40px);
+			}
+		}
+	}
+}
+.footer{
+	background-image: url(../img/footer-bg.png);
+	&__socials{
+		margin:0 auto;
+		padding-top: 100px;
+	}
+	&__link{
+		display: block;
+		height: auto;
+		.link__img{
+			height: 25px;
+			width: auto;
+		}
+	}
+	&__form{
+		margin: 0 auto;
+		padding-top: 80px;
+		.input{
+			width: 46%;
+			display:block;
+			background-color: transparent;
+			border:none;
+			border-bottom: 1px solid #afafaf;
+			color: #fff;
+			&_messege{
+				padding-top: 130px;
+				width: 100%;
+			}
+			&_name{
+				margin-right: 50px;
+			}
+			&_email{
+			}
+		}
+	}
+}
